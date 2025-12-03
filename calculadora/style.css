@@ -1,0 +1,153 @@
+/* Paleta de cores */
+:root {
+    --cor-principal: #00b894;   /* Verde bonito */
+    --cor-secundaria: #019875;  /* Verde mais escuro */
+    --cor-suave: #dffaf1;       /* Verde clarinho */
+    --cor-fundo: #f7f9fc;       /* Cinza azulado suave */
+    --cor-texto: #2d3436;       /* Cinza escuro elegante */
+    --branco: #ffffff;
+}
+
+/* Ajustes gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* Cabeçalho */
+header {
+    background: var(--cor-principal);
+    color: var(--branco);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px #00000022;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+/* Conteúdo geral */
+main {
+    padding: 40px;
+}
+
+/* Card de conteúdo */
+.content {
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px #00000015;
+}
+
+/* Formulários */
+input, button {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--cor-principal);
+    box-shadow: 0px 0px 5px #00b89488;
+}
+
+/* Botões */
+button {
+    background: var(--cor-principal);
+    color: var(--branco);
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: var(--cor-secundaria);
+    transform: scale(1.03);
+}
+
+/* Caixa de login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.login-box {
+    background: var(--branco);
+    padding: 40px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px #00000020;
+}
+
+/* Tabela de IMC */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background: var(--cor-principal);
+    color: var(--branco);
+    padding: 12px;
+    font-weight: 600;
+}
+
+td {
+    padding: 12px;
+    background: var(--cor-suave);
+    border-bottom: 2px solid var(--branco);
+}
+
+tr:nth-child(even) td {
+    background: #c6f4e9;
+}
+
+/* Resultado */
+#resultado {
+    padding: 12px;
+    margin-top: 10px;
+    font-weight: 600;
+    background: var(--cor-suave);
+    border-left: 5px solid var(--cor-principal);
+    border-radius: 6px;
+}
+
+/* Rodapé */
+footer {
+    background: var(--cor-principal);
+    color: var(--branco);
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-weight: 400;
+}
