@@ -1,0 +1,280 @@
+/* ===============================
+   PALLETA DE CORES
+=============================== */
+:root {
+    --cor-principal: #6EB3F7;     /* Azul claro */
+    --cor-secundaria: #4A90E2;    /* Azul médio */
+    --cor-suave: #E3F2FD;         /* Azul clarinho */
+    --cor-fundo: #F4F8FF;         /* Fundo geral */
+    --cor-texto: #2d3436;         /* Texto escuro */
+    --branco: #ffffff;            /* Branco */
+}
+
+/* ===============================
+   ESTILOS GERAIS
+=============================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* ===============================
+   CABEÇALHO
+=============================== */
+header {
+    background: var(--cor-principal);
+    color: var(--branco);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px #00000022;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* ===============================
+   MENU (NAV) - BOTÕES
+=============================== */
+nav {
+    display: flex;
+    gap: 12px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #4A90E2;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    box-shadow: 0px 2px 5px #00000022;
+}
+
+nav a:hover {
+    background-color: #6EB3F7;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px #00000033;
+}
+
+/* ===============================
+   CONTAINER CENTRAL
+=============================== */
+.container-central {
+    width: 400px;
+    padding: 30px;
+    background: rgba(255,255,255,0.1); /* Fundo levemente translúcido */
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===============================
+   LOGO
+=============================== */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-container h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+/* Ícone pulsando */
+.icone-pulsando {
+    width: 40px;
+    height: 40px;
+    animation: pulsar 1.5s infinite ease-in-out;
+}
+
+@keyframes pulsar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+/* ===============================
+   CARD DE CONTEÚDO / FORMULÁRIOS
+=============================== */
+.content {
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px #00000015;
+}
+
+input, button {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #b5c9e3;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--cor-principal);
+    box-shadow: 0px 0px 5px #6EB3F788;
+}
+
+button {
+    background: var(--cor-principal);
+    color: var(--branco);
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: var(--cor-secundaria);
+    transform: scale(1.03);
+}
+
+/* ===============================
+   LOGIN
+=============================== */
+.login-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.login-box {
+    background: var(--branco);
+    padding: 40px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px #00000020;
+}
+
+/* ===============================
+   TABELA DE IMC
+=============================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background: var(--cor-principal);
+    color: var(--branco);
+    padding: 12px;
+    font-weight: 600;
+}
+
+td {
+    padding: 12px;
+    background: var(--cor-suave);
+    border-bottom: 2px solid var(--branco);
+}
+
+tr:nth-child(even) td {
+    background: #D6EAFB;
+}
+
+/* Resultado IMC */
+#resultado {
+    padding: 12px;
+    margin-top: 10px;
+    font-weight: 600;
+    background: var(--cor-suave);
+    border-left: 5px solid var(--cor-principal);
+    border-radius: 6px;
+}
+
+/* ===============================
+   FOTOS EM PARALELO
+=============================== */
+.imagens-resumo {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.foto-resumo {
+    text-align: center;
+    max-width: 250px;
+}
+
+.foto-resumo img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px #00000020;
+    transition: transform 0.3s ease;
+}
+
+.foto-resumo img:hover {
+    transform: scale(1.05);
+}
+
+.foto-resumo p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3436;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ===============================
+   BOTÃO EXTERNO
+=============================== */
+.botao-externo {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.botao-externo a {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #4A90E2;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    box-shadow: 0px 2px 5px #00000022;
+}
+
+.botao-externo a:hover {
+    background-color: #6EB3F7;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px #00000033;
+}
+
+/* ===============================
+   RODAPÉ DENTRO DO CONTAINER
+=============================== */
+footer {
+    width: 100%;
+    background: #4A90E2;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    margin-top: 20px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0px 2px 6px #00000020;
+}
